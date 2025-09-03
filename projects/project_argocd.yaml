@@ -4,7 +4,8 @@ metadata:
   name: argocd
 spec:
   sourceRepos:
-    - 'git@github.com:denic0la/argocd-infra.git'
+    - 'ssh://git@github.com:denic0la/argocd-infra.git'
+    - 'git@github.com:DeNic0la/argocd-infra.git'
   sourceNamespaces:
     - '*'
   destinations:
