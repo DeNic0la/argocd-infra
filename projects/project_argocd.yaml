@@ -8,4 +8,5 @@ spec:
   sourceNamespaces:
     - '*'
   destinations:
-    - '*'
+    - namespace: '*'
+      server: 'https://kubernetes.default.svc'
