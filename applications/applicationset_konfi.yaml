@@ -20,7 +20,7 @@ spec:
     spec:
       project: konfi
       source:
-        repoURL: ssh://git@github.com:denic0la/konfi-infra.git
+        repoURL: git@github.com:denic0la/konfi-infra.git
         targetRevision: '{{.revision}}'
         path: '{{.path}}'
       destination:

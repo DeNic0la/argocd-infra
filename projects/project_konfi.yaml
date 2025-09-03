@@ -4,7 +4,7 @@ metadata:
   name: konfi
 spec:
   sourceRepos:
-    - 'ssh://git@github.com:denic0la/konfi-infra.git'
+    - 'git@github.com:denic0la/konfi-infra.git'
   sourceNamespaces:
     - 'konfi'
     - 'konfi-dev'

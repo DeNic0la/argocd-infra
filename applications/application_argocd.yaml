@@ -9,7 +9,7 @@ spec:
     server: 'https://kubernetes.default.svc'
     namespace: argocd
   source:
-    repoURL: ssh://git@github.com:denic0la/argocd-infra.git
+    repoURL: git@github.com:denic0la/argocd-infra.git
     targetRevision: main
     path: '.'
 
