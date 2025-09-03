@@ -5,10 +5,12 @@ resources:
   - github.com/argoproj/argo-cd//manifests/cluster-install?ref=v3.1.1
 #  - ./base/argocd-ssh-known-hosts-cm.yaml
   - base/cm_argocd.yaml
-  - ./sealedsecret_private-repo-creds.yaml
   - ./base/argo-cd-certificate.yaml
   - ./base/argo-cd-issuer.yaml
   - ./base/argo-cd-ui-ingress.yaml
+# SEALED SECRETS
+  - sealedsecret_repo-creds-argocd-infra.yaml
+  - sealedsecret_repo-creds-konfi-infra.yaml
 
 # PROJECTS
   - projects/project_argocd.yaml
