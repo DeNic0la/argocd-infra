@@ -1,0 +1,11 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: argocd
+spec:
+  sourceRepos:
+    - 'ssh://git@github.com:denic0la/argocd-infra.git'
+  sourceNamespaces:
+    - '*'
+  destinations:
+    - '*'

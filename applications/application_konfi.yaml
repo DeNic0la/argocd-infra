@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: konfi
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+    - list:
+        elements:
+          - namespace: konfi-dev
+            revision: dev
+            path: stages/dev
+#          - namespace: konfi
+#            revision: main
+#            path: stages/prod
+  template:
+    metadata:
+      name: '{{.namespcae}}'
+    spec:
+      project: konfi
+      source:
+        repoURL: git@github.com:denic0la/konfi-infra.git
+        targetRevision: '{{.revision}}'
+        path: {{.path}}
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: {{.namespace}}
