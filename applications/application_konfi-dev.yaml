@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: konfi-dev
+spec:
+  project: konfi
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: konfi-dev
+  source:
+    repoURL: 'git@github.com:denic0la/konfi-infra.git'
+    targetRevision: dev
+    path: 'stages/dev'
+
+

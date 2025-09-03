@@ -16,7 +16,8 @@ resources:
 
 # APPLICATIONS
   - applications/application_argocd.yaml
-  - applications/application_konfi.yaml
+  - applications/application_konfi-dev.yaml
+#  - applications/applicationset_konfi.yaml
 
 
 
