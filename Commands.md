@@ -1,10 +1,11 @@
 # Create a json/yaml-encoded Secret somehow:
 # (note use of `--dry-run` - this is just a local file!)
-echo -n bar | kubectl create secret generic mysecret --dry-run=client --from-file=foo=/dev/stdin -o json >mysecret.yaml
+echo -n bar | kubectl create secret generic mysecret --dry-run=client --from-file=foo=/dev/stdin -o yaml >mysecret.yaml
 
 # This is the important bit:
 kubeseal -f mysecret.yaml -w mysealedsecret.yaml
 
+kubectl get secret -n argocd private-repo-creds -o yaml > secret_private-repo-creds.yaml
 
 project: konfi
 source:

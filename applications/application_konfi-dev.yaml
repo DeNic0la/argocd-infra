@@ -8,7 +8,7 @@ spec:
     server: 'https://kubernetes.default.svc'
     namespace: konfi-dev
   source:
-    repoURL: 'git@github.com:denic0la/konfi-infra.git'
+    repoURL: ssh://git@github.com:denic0la/konfi-infra.git
     targetRevision: dev
     path: 'stages/dev'
 
