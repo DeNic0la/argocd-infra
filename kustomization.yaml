@@ -12,7 +12,7 @@ resources:
 # SEALED SECRETS
   - sealedsecret_repo-creds-argocd-infra.yaml
   - sealedsecret_repo-creds-konfi-infra.yaml
-  - sealedsecret_argocd-secret.yaml
+ # - sealedsecret_argocd-secret.yaml
 
 # PROJECTS
   - projects/project_argocd.yaml
