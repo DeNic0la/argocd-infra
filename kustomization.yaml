@@ -23,6 +23,7 @@ resources:
 
 
 
-
+patches:
+  - path: base/cm_argocd.yaml
 
 
