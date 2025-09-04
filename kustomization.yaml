@@ -8,7 +8,7 @@ resources:
   #  - ./base/argocd-ssh-known-hosts-cm.yaml
   - ./base/argo-cd-issuer.yaml
   - ./base/argo-cd-ui-ingress.yaml
-  - /base/argo-cd-certificate.yaml
+  - ./base/argo-cd-certificate.yaml
 # SEALED SECRETS
   - sealedsecret_repo-creds-argocd-infra.yaml
   - sealedsecret_repo-creds-konfi-infra.yaml
