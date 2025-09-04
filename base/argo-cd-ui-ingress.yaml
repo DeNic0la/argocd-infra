@@ -9,15 +9,15 @@ metadata:
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/name: argocd-server-http-ingress
   annotations:
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+    ingress.kubernetes.io/proxy-body-size: 100M
+    ingress.kubernetes.io/app-root: "/"
 spec:
   ingressClassName: nginx
   rules:
     - http:
         paths:
           - path: /
-            pathType: Prefix
+            pathType: ImplementationSpecific
             backend:
               service:
                 name: argocd-server
