@@ -11,7 +11,7 @@ spec:
     email: nicola@fioretti.info
     server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
-      name: letsencrypt
+      name: argocd-secret
     solvers:
       # An empty 'selector' means that this solver matches all domains
       - selector: {}

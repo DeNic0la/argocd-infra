@@ -27,7 +27,7 @@ spec:
   tls:
     - hosts:
         - argocd.denic0la.ch
-      secretName: letsencrypt
+      secretName: argocd-secret
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -52,4 +52,4 @@ spec:
   tls:
     - hosts:
         - argocd.denic0la.ch
-      secretName: letsencrypt
+      secretName: argocd-secret

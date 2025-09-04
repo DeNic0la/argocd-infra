@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: argo-cd-cert
+spec:
+  secretName: argocd-secret
+  issuerRef:
+    name: argo-cd-issuer
+    kind: Issuer
+  commonName: argocd.denic0la.ch
+  dnsNames:
+  - argocd.denic0la.ch
