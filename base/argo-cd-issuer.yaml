@@ -2,6 +2,10 @@ apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
   name: argo-cd-issuer
+  labels:
+    app.kubernetes.io/part-of: argocd
+    app.kubernetes.io/component: server
+    app.kubernetes.io/instance: argocd
 spec:
   acme:
     email: nicola@fioretti.info
