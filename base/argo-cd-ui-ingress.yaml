@@ -10,13 +10,13 @@ spec:
   tls:
   - hosts:
     - argocd.denic0la.ch
-    secretName: argocd-secret
+    secretName: argo-cd-issuer
   rules:
   - host: argocd.denic0la.ch
     http:
       paths:
       - path: /
-        pathType: ImplementationSpecific
+        pathType: Prefix
         backend:
           service:
             name: argocd-server

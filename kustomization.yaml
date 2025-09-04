@@ -5,7 +5,6 @@ resources:
   - github.com/argoproj/argo-cd//manifests/cluster-install?ref=v3.1.1
 #  - ./base/argocd-ssh-known-hosts-cm.yaml
   - base/cm_argocd.yaml
-  - ./base/argo-cd-certificate.yaml
   - ./base/argo-cd-issuer.yaml
   - ./base/argo-cd-ui-ingress.yaml
 # SEALED SECRETS
