@@ -44,5 +44,12 @@ patches:
         
 
         
-        
+replacements:
+  - source:
+      name: argocd-secret-patch
+      kind: Secret
+    targets:
+     - select:
+        name: argocd-secret
+        kind: Secret
         
