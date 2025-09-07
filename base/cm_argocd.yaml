@@ -173,5 +173,3 @@ data:
     hs.status = "Healthy"
     hs.message = "Controller doesn't report resource status"
     return hs
-
-  kustomize.buildOptions: --load_restrictor none

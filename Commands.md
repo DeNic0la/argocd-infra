@@ -5,7 +5,7 @@ echo -n bar | kubectl create secret generic mysecret --dry-run=client --from-fil
 # This is the important bit:
 kubeseal -f mysecret.yaml -w mysealedsecret.yaml
 
-kubectl get secret -n argocd private-repo-creds -o yaml > secret_private-repo-creds.yaml
+kubectl get secret -n argocd argocd-secret -o yaml > secret_argocd-secret.yaml
 
 project: konfi
 source:

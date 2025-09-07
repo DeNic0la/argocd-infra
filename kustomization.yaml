@@ -2,17 +2,17 @@ kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
 
 resources:
-#  - base/cm_argocd.yaml
+  - ./base/cm_argocd.yaml
   - github.com/argoproj/argo-cd//manifests/namespace-install?ref=v3.1.1
 #  - github.com/argoproj/argo-cd//manifests/crds?ref=v3.1.1
   #  - ./base/argocd-ssh-known-hosts-cm.yaml
-  - ./base/argo-cd-issuer.yaml
+#  - ./base/argo-cd-issuer.yaml
   - ./base/argo-cd-ui-ingress.yaml
-  - ./base/argo-cd-certificate.yaml
+#  - ./base/argo-cd-certificate.yaml
 # SEALED SECRETS
   - sealedsecret_repo-creds-argocd-infra.yaml
   - sealedsecret_repo-creds-konfi-infra.yaml
- # - sealedsecret_argocd-secret.yaml
+  - sealedsecret_argocd-secret.yaml
 
 # PROJECTS
   - projects/project_argocd.yaml
@@ -27,6 +27,11 @@ resources:
 patches:
   - path: base/cm_argocd.yaml
     target:
-      name: cm-argocd
+      kind: ConfigMap
+      name: argocd-cm
+      namespace: argocd
+
+
+
 
 
