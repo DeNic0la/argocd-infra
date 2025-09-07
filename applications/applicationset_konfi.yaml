@@ -11,9 +11,9 @@ spec:
           - namespace: konfi-dev
             revision: dev
             path: stages/dev
-#          - namespace: konfi
-#            revision: main
-#            path: stages/prod
+          - namespace: konfi
+            revision: main
+            path: stages/prod
   template:
     metadata:
       name: '{{.namespcae}}'
