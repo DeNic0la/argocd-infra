@@ -26,6 +26,14 @@ resources:
 
 patches:
   - path: base/argo-cd-cm.yaml
+    target:
+      name: argocd-cm
+      labelSelector:
+        app.kubernetes.io/name=argocd-cm
+        app.kubernetes.io/part-of=argocd
+      group:
+        argoproj.io
+      kind: ConfigMap
 
 
 
