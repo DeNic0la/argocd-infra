@@ -108,7 +108,6 @@ data:
   application.instanceLabelKey: argocd.argoproj.io/instance
   statusbadge.enabled: 'true'
   url: "https://argocd.denic0la.ch"
-  server.insecure: "true"
   resource.customizations.health.certmanager.k8s.io_Certificate: |
     hs = {}
     if obj.status ~= nil then
