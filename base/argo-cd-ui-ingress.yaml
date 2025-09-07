@@ -10,6 +10,7 @@ metadata:
     app.kubernetes.io/name: argocd-server-http-ingress
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-issuer
+    cert-manager.io/common-name: argocd.denic0la.ch
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
