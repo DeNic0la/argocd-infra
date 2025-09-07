@@ -48,6 +48,8 @@ replacements:
       kind: Secret
       version: v1
       namespace: argocd
+      fieldPath: data
+
     targets:
       - select:
           name: argocd-secret
