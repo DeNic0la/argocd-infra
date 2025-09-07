@@ -42,6 +42,14 @@ patches:
         path: /metadata/annotations
         value: "sealedsecrets.bitnami.com/managed: true"
         
+replacements:
+  - source:
+      name: argocd-secret-patch
+      kind: Secret
+    targets:
+      - select:
+          name: argocd-secret
+          kind: Secret
 
         
 
