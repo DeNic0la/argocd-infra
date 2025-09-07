@@ -16,7 +16,7 @@ spec:
             path: stages/prod
   template:
     metadata:
-      name: '{{.namespcae}}'
+      name: '{{.namespace}}'
     spec:
       project: konfi
       source:
