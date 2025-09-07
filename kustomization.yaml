@@ -46,10 +46,14 @@ replacements:
   - source:
       name: argocd-secret-patch
       kind: Secret
+      version: v1
+      namespace: argocd
     targets:
       - select:
           name: argocd-secret
           kind: Secret
+          version: v1
+          namespace: argocd
 
         
 
