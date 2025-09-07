@@ -28,4 +28,4 @@ spec:
   tls:
     - hosts:
         - argocd.denic0la.ch
-      secretName: argocd-secret
+      secretName: argocd-tls
