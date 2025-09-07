@@ -30,7 +30,6 @@ patches:
       name: argocd-cm
       labelSelector:
         app.kubernetes.io/name=argocd-cm
-        app.kubernetes.io/part-of=argocd
       kind: ConfigMap
 
 
