@@ -22,11 +22,6 @@ resources:
 #  - applications/application_konfi-dev.yaml
   - applications/applicationset_konfi.yaml
 
-secretGenerator:
-  - name: argocd-server-tls
-    type: kubernetes.io/tls
-    options:
-      disableNameSuffixHash: true
 
 patches:
   - path: base/argo-cd-cm.yaml
