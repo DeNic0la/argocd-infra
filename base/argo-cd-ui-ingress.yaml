@@ -9,8 +9,8 @@ metadata:
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/name: argocd-server-http-ingress
   annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-issuer
     nginx.ingress.kubernetes.io/rewrite-target: /
-    cert-manager.io/certificate-name: denic0la.ch
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
 spec:
@@ -29,4 +29,4 @@ spec:
   tls:
     - hosts:
         - argocd.denic0la.ch
-      secretName: argocd-secret-patch
+      secretName: argocd-tls-managed
