@@ -5,6 +5,7 @@ metadata:
 spec:
   sourceRepos:
     - 'git@github.com:denic0la/konfi-infra.git'
+    - 'https://github.com/DeNic0la/konfi-infra.git'
   sourceNamespaces:
     - 'konfi'
     - 'konfi-dev'
