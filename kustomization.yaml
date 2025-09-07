@@ -37,12 +37,12 @@ patches:
       name: argocd-secret
       labelSelector:
         app.kubernetes.io/name=argocd-secret
-    patch: |
+    patch: |-
       - op: add
         path: /metadata/annotations
         value: "sealedsecrets.bitnami.com/managed: true"
         
-        
+
         
         
         
