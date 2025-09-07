@@ -10,6 +10,7 @@ metadata:
     app.kubernetes.io/name: argocd-server-http-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/certificate-name: denic0la.ch
 spec:
   ingressClassName: nginx
   rules:
