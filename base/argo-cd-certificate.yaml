@@ -5,7 +5,7 @@ metadata:
 spec:
   secretName: argocd-secret
   issuerRef:
-    name: argo-cd-issuer
+    name: letsencrypt-wcard
     kind: Issuer
   commonName: argocd.denic0la.ch
   dnsNames:

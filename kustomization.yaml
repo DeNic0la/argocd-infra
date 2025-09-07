@@ -13,7 +13,7 @@ resources:
   #  - ./base/argocd-ssh-known-hosts-cm.yaml
 #  - ./base/argo-cd-issuer.yaml
   - ./base/argo-cd-ui-ingress.yaml
-#  - ./base/argo-cd-certificate.yaml
+  - ./base/argo-cd-certificate.yaml
 
 # PROJECTS
   - projects/project_argocd.yaml
@@ -32,8 +32,15 @@ patches:
       labelSelector:
         app.kubernetes.io/name=argocd-cm
       kind: ConfigMap
-
-
-
-
-
+  - target:
+      kind: secret
+      name: argocd-secret
+    patch: |
+      - op: add
+        path: /metadata/annotations
+        value: "sealedsecrets.bitnami.com/managed: true"
+        
+        
+        
+        
+        
