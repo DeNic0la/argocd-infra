@@ -3,10 +3,10 @@ kind: Certificate
 metadata:
   name: denic0la.ch
 spec:
-  secretName: argocd-secret
+  secretName: argocd-server-tls
   issuerRef:
-    name: letsencrypt-wcard
-    kind: Issuer
+    name: letsencrypt-issuer
+    kind: ClusterIssuer
   commonName: argocd.denic0la.ch
   dnsNames:
   - argocd.denic0la.ch

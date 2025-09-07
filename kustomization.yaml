@@ -13,7 +13,7 @@ resources:
   #  - ./base/argocd-ssh-known-hosts-cm.yaml
 #  - ./base/argo-cd-issuer.yaml
   - ./base/argo-cd-ui-ingress.yaml
- # - ./base/argo-cd-certificate.yaml
+  - ./base/argo-cd-certificate.yaml
 
 # PROJECTS
   - projects/project_argocd.yaml
@@ -24,6 +24,11 @@ resources:
   - applications/application_konfi-dev.yaml
 #  - applications/applicationset_konfi.yaml
 
+secretGenerator:
+  - name: argocd-server-tls
+    type: kubernetes.io/tls
+    options:
+      disableNameSuffixHash: true
 
 patches:
   - path: base/argo-cd-cm.yaml
