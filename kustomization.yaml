@@ -5,7 +5,7 @@ resources:
   # SEALED SECRETS
   - sealedsecret_repo-creds-argocd-infra.yaml
   - sealedsecret_repo-creds-konfi-infra.yaml
-  - sealedsecret_argocd-secret.yaml
+  - sealedsecret_argocd-secret-patch.yaml
 
   #- ./base/argo-cd-cm.yaml
   - github.com/argoproj/argo-cd//manifests/namespace-install?ref=v3.1.1
