@@ -13,7 +13,7 @@ resources:
   #  - ./base/argocd-ssh-known-hosts-cm.yaml
 #  - ./base/argo-cd-issuer.yaml
   - ./base/argo-cd-ui-ingress.yaml
-  - ./base/argo-cd-certificate.yaml
+ # - ./base/argo-cd-certificate.yaml
 
 # PROJECTS
   - projects/project_argocd.yaml
@@ -33,8 +33,10 @@ patches:
         app.kubernetes.io/name=argocd-cm
       kind: ConfigMap
   - target:
-      kind: secret
+      kind: Secret
       name: argocd-secret
+      labelSelector:
+        app.kubernetes.io/name=argocd-secret
     patch: |
       - op: add
         path: /metadata/annotations
