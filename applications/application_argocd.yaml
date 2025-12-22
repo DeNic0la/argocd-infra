@@ -3,6 +3,9 @@ kind: Application
 metadata:
   namespace: argocd
   name: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.on-deployed.pushover: uwjm3jdi3fs5dqdzwzidysjsrmzkpb
+    notifications.argoproj.io/subscribe.on-sync-succeeded.pushover: uwjm3jdi3fs5dqdzwzidysjsrmzkpb
 spec:
   project: argocd
   destination:
@@ -12,6 +15,17 @@ spec:
     repoURL: https://github.com/DeNic0la/argocd-infra.git
     targetRevision: main
     path: '.'
+  syncPolicy:
+    syncOptions:
+      - RespectIgnoreDifferences=true
+    retry:
+      refresh: true
+    automated:
+      selfHeal: false
+      allowEmpty: false
+      prune: false
+      enabled: true
+
 
 
   

@@ -7,12 +7,15 @@ resources:
   - sealedsecret_argocd-secret.yaml
   - sealedsecret_repo-creds-argocd-infra.yaml
   - sealedsecret_repo-creds-konfi-infra.yaml
+  - sealedsecret_pushover-tokeyn.yaml
 
   - github.com/argoproj/argo-cd//manifests/namespace-install?ref=v3.1.1
 #  - github.com/argoproj/argo-cd//manifests/crds?ref=v3.1.1
   #  - ./base/argocd-ssh-known-hosts-cm.yaml
 
   - base/argo-cd-ui-ingress.yaml
+  - base/argocd-notifications-cm.yaml
+
 
 # PROJECTS
   - projects/project_argocd.yaml

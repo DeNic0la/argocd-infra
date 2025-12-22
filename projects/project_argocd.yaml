@@ -12,3 +12,5 @@ spec:
   destinations:
     - namespace: '*'
       server: 'https://kubernetes.default.svc'
+  syncWindows:
+    -

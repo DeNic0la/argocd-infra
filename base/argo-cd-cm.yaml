@@ -6,6 +6,8 @@ metadata:
   labels:
     app.kubernetes.io/part-of: argocd
     app.kubernetes.io/name: argocd-cm
+  annotations:
+    argocd.argoproj.io/tracking-id: argocd:/ConfigMap:argocd/argocd-cm
 data:
   resource.customizations.ignoreResourceUpdates.all: |
     jsonPointers:
@@ -107,6 +109,7 @@ data:
   accounts.nicola.enabled: "true"
   application.instanceLabelKey: argocd.argoproj.io/instance
   statusbadge.enabled: 'true'
+
   url: "https://argocd.denic0la.ch"
   resource.customizations.health.certmanager.k8s.io_Certificate: |
     hs = {}
@@ -157,3 +160,9 @@ data:
     hs.status = "Healthy"
     hs.message = "Controller doesn't report resource status"
     return hs
+
+  resource.customizations.knownTypeFields.argoproj.io_Rollout: |
+    - field: spec.template.spec
+      type: core/v1/PodSpec
+  application.resourceTrackingMethod: annotation
+  users.anonymous.enabled: "false"
