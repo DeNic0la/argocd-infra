@@ -8,7 +8,7 @@ resources:
   - sealedsecret_repo-creds-argocd-infra.yaml
   - sealedsecret_repo-creds-konfi-infra.yaml
 
-  - github.com/argoproj/argo-cd//manifests/namespace-install?ref=v3.1.1
+  - github.com/argoproj/argo-cd//manifests/install?ref=v3.2.2
 #  - github.com/argoproj/argo-cd//manifests/crds?ref=v3.1.1
   #  - ./base/argocd-ssh-known-hosts-cm.yaml
 
