@@ -20,6 +20,10 @@ spec:
       - RespectIgnoreDifferences=true
     retry:
       refresh: true
+      backoff:
+        duration: 3m
+        factor: 3
+        maxDuration: 5m
     automated:
       selfHeal: false
       allowEmpty: false
