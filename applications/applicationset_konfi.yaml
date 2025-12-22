@@ -29,3 +29,12 @@ spec:
       destination:
         server: https://kubernetes.default.svc
         namespace: '{{.namespace}}'
+      syncPolicy:
+        syncOptions:
+          - RespectIgnoreDifferences=true
+        automated:
+          enabled: true
+          allowEmpty: false
+          selfHeal: false
+          prune: true
+
