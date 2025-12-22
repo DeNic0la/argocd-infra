@@ -39,16 +39,6 @@ patches:
       labelSelector:
         app.kubernetes.io/name=argocd-secret
     patch: |-
-      - op: add
-        path: /metadata/annotations
-        value: "sealedsecrets.bitnami.com/managed: true"
-      - op: add
-        path: /metadata/ownerReferences[0]
-        value: |-
-          - apiVersion: bitnami.com/v1alpha1
-            controller: true
-            kind: SealedSecret
-            name: argocd-secret
       - op: replace
         path: /metadata/name
         value: initial-argocd-secret
