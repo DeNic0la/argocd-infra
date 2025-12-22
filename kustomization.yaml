@@ -42,8 +42,15 @@ patches:
       - op: add
         path: /metadata/annotations
         value: "sealedsecrets.bitnami.com/managed: true"
-        
-#replacements:
+      - op: add
+        path: /metadata/ownerReferences[0]
+        value: |-
+          - apiVersion: bitnami.com/v1alpha1
+            controller: true
+            kind: SealedSecret
+            name: argocd-secret
+      
+      #replacements:
 #  - source:
 #      name: argocd-secret-patch
 #      kind: Secret
