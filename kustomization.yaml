@@ -50,7 +50,7 @@ patches:
             kind: SealedSecret
             name: argocd-secret
       - op: replace
-        path: /name
+        path: /metadata/name
         value: initial-argocd-secret
       
       #replacements:
