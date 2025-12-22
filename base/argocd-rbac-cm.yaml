@@ -9,8 +9,10 @@ metadata:
   name: argocd-rbac-cm
   namespace: argocd
 data:
-  policy.nicola-overlay.csv: |
+  policy.csv: |
     p, role:nicola, applications, *, */*, allow
     p, role:nicola, projects, *, *, allow
     p, role:nicola, *, *, *, allow
     g, user:nicola, role:nicola
+  policy.default: role:readonly
+  policy.patchMode: 'glob'
