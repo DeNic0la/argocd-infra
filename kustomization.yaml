@@ -49,6 +49,9 @@ patches:
             controller: true
             kind: SealedSecret
             name: argocd-secret
+      - op: replace
+        path: /name
+        value: initial-argocd-secret
       
       #replacements:
 #  - source:
