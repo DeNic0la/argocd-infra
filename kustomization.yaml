@@ -13,7 +13,7 @@ resources:
   #  - ./base/argocd-ssh-known-hosts-cm.yaml
 
   - base/argo-cd-ui-ingress.yaml
-  - base/argocd-ssh-known-hosts-cm.yaml
+ # - base/argocd-ssh-known-hosts-cm.yaml
   - base/argocd-rbac-cm.yaml
 
 # PROJECTS
