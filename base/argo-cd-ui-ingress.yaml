@@ -9,6 +9,7 @@ metadata:
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/name: argocd-server-http-ingress
   annotations:
+    argocd.argoproj.io/tracking-id: argocd:networking.k8s.io/Ingress:argocd/argocd-server-http-ingress
     cert-manager.io/cluster-issuer: letsencrypt-issuer
     cert-manager.io/common-name: argocd.denic0la.ch
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
