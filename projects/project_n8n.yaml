@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: n8n
+spec:
+  sourceRepos:
+    - 'git@github.com:denic0la/n8n-infra.git'
+    - 'https://github.com/DeNic0la/n8n-infra.git'
+  sourceNamespaces:
+    - 'n8n'
+  destinations:
+    - namespace: 'n8n'
+      server: 'https://kubernetes.default.svc'

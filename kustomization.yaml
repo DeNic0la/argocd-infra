@@ -8,6 +8,7 @@ resources:
   - sealedsecret_repo-creds-argocd-infra.yaml
   - sealedsecret_repo-creds-konfi-infra.yaml
   - sealedsecret_pushover-token.yaml
+  - sealedsecret_repo-creds-n8n-infra.yaml
 
   - github.com/argoproj/argo-cd//manifests/namespace-install?ref=v3.1.1
 #  - github.com/argoproj/argo-cd//manifests/crds?ref=v3.1.1
@@ -19,11 +20,12 @@ resources:
 # PROJECTS
   - projects/project_argocd.yaml
   - projects/project_konfi.yaml
+  - projects/project_n8n.yaml
 
 # APPLICATIONS
   - applications/application_argocd.yaml
-#  - applications/application_konfi-dev.yaml
   - applications/applicationset_konfi.yaml
+  - applications/application_n8n.yaml
 
 
 patches:
