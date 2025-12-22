@@ -13,8 +13,6 @@ resources:
   #  - ./base/argocd-ssh-known-hosts-cm.yaml
 
   - base/argo-cd-ui-ingress.yaml
- # - base/argocd-ssh-known-hosts-cm.yaml
-  - base/argocd-rbac-cm.yaml
 
 # PROJECTS
   - projects/project_argocd.yaml
@@ -32,6 +30,12 @@ patches:
       name: argocd-cm
       labelSelector:
         app.kubernetes.io/name=argocd-cm
+      kind: ConfigMap
+  - path: base/argocd-rbac-cm.yaml
+    target:
+      name: argocd-rbac-cm
+      labelSelector:
+        app.kubernetes.io/name=argocd-rbac-cm
       kind: ConfigMap
   - target:
       kind: Secret
