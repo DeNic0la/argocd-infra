@@ -7,14 +7,13 @@ resources:
   - sealedsecret_argocd-secret.yaml
   - sealedsecret_repo-creds-argocd-infra.yaml
   - sealedsecret_repo-creds-konfi-infra.yaml
-  - sealedsecret_pushover-tokeyn.yaml
+  - sealedsecret_pushover-token.yaml
 
   - github.com/argoproj/argo-cd//manifests/namespace-install?ref=v3.1.1
 #  - github.com/argoproj/argo-cd//manifests/crds?ref=v3.1.1
   #  - ./base/argocd-ssh-known-hosts-cm.yaml
 
   - base/argo-cd-ui-ingress.yaml
-  - base/argocd-notifications-cm.yaml
 
 
 # PROJECTS
@@ -39,6 +38,11 @@ patches:
       name: argocd-rbac-cm
       labelSelector:
         app.kubernetes.io/name=argocd-rbac-cm
+  - path: base/argocd-notifications-cm.yaml
+    target:
+      name: argocd-notifications-cm
+      labelSelector:
+        app.kubernetes.io/argocd-notifications-cm
       kind: ConfigMap
   - target:
       kind: Secret
