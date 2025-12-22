@@ -13,6 +13,8 @@ data:
 kind: ConfigMap
 metadata:
   name: argocd-ssh-known-hosts-cm
+  annotations:
+    argocd.argoproj.io/tracking-id: argocd:/ConfigMap:argocd/argocd-ssh-known-hosts-cm
   labels:
     app.kubernetes.io/component: server
     app.kubernetes.io/instance: argocd
