@@ -12,9 +12,9 @@ resources:
 #  - github.com/argoproj/argo-cd//manifests/crds?ref=v3.1.1
   #  - ./base/argocd-ssh-known-hosts-cm.yaml
 
-  - ./base/argo-cd-ui-ingress.yaml
-  - ./base/argocd-ssh-known-hosts-cm.yaml
-  - ./base/argocd-rbac-cm.yaml
+  - base/argo-cd-ui-ingress.yaml
+  - base/argocd-ssh-known-hosts-cm.yaml
+  - base/argocd-rbac-cm.yaml
 
 # PROJECTS
   - projects/project_argocd.yaml
