@@ -20,12 +20,10 @@ resources:
 # PROJECTS
   - projects/project_argocd.yaml
   - projects/project_konfi.yaml
-  - projects/project_n8n.yaml
 
 # APPLICATIONS
   - applications/application_argocd.yaml
   - applications/applicationset_konfi.yaml
-  - applications/application_n8n.yaml
 
 
 patches:
