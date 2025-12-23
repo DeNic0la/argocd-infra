@@ -10,6 +10,6 @@ spec:
   source:
     repoURL: https://github.com/DeNic0la/n8n-infra.git
     targetRevision: main
-    path: '.'
+    path: production
 
 
