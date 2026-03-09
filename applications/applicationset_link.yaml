@@ -1,0 +1,40 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: link
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+    - list:
+        elements:
+          - namespace: link-dev
+            revision: dev
+            path: dev
+#          - namespace: link
+#            revision: main
+#            path: prod
+  template:
+    metadata:
+      name: '{{.namespace}}'
+      annotations:
+        pref.argocd.argoproj.io/default-view: pods
+        pref.argocd.argoproj.io/default-pod-sort: topLevelResource
+    spec:
+      project: link
+      source:
+        repoURL: https://github.com/DeNic0la/link-infra.git
+        targetRevision: '{{.revision}}'
+        path: '{{.path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{.namespace}}'
+      syncPolicy:
+        syncOptions:
+          - RespectIgnoreDifferences=true
+        automated:
+          enabled: true
+          allowEmpty: false
+          selfHeal: false
+          prune: true
+

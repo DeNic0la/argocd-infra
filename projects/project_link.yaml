@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: link
+spec:
+  sourceRepos:
+    - 'git@github.com:denic0la/link-infra.git'
+    - 'https://github.com/DeNic0la/link-infra.git'
+  sourceNamespaces:
+    - 'link'
+    - 'link-dev'
+  destinations: 
+    - namespace: '*'
+      server: 'https://kubernetes.default.svc'
