@@ -11,9 +11,9 @@ spec:
           - namespace: link-dev
             revision: dev
             path: dev
-#          - namespace: link
-#            revision: main
-#            path: prod
+          - namespace: link
+            revision: main
+            path: prod
   template:
     metadata:
       name: '{{.namespace}}'
