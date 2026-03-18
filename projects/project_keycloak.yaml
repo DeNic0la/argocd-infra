@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: keycloak
+spec:
+  sourceRepos:
+    - 'ssh://git@github.com:denic0la/keycloak-infra.git'
+    - 'git@github.com:DeNic0la/keycloak-infra.git'
+    - 'https://github.com/DeNic0la/keycloak-infra.git'
+  sourceNamespaces:
+    - 'keycloak'
+  destinations:
+    - namespace: 'keycloak'
+      server: 'https://kubernetes.default.svc'
