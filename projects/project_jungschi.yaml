@@ -7,7 +7,7 @@ spec:
     - 'git@github.com:denic0la/jungschi-infra.git'
     - 'https://github.com/DeNic0la/jungschi-infra.git'
   sourceNamespaces:
-#    - 'jungschi'
+    - 'jungschi'
     - 'jungschi-dev'
   destinations: 
     - namespace: '*'

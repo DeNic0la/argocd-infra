@@ -11,9 +11,9 @@ spec:
           - namespace: jungschi-dev
             revision: main
             path: dev
-#          - namespace: jungschi
-#            revision: main
-#            path: prod
+          - namespace: jungschi
+            revision: main
+            path: prod
   template:
     metadata:
       name: '{{.namespace}}'
