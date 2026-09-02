@@ -28,8 +28,7 @@ resources:
   - applications/application_argocd.yaml
   - applications/applicationset_konfi.yaml
   - applications/applicationset_link.yaml
-  - applications/application_keycloak.yaml
-  - applications/applicationset_jungschi.yaml
+
 
 
 patches:
