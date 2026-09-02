@@ -8,9 +8,6 @@ spec:
   generators:
     - list:
         elements:
-          - namespace: konfi-dev
-            revision: dev
-            path: stages/dev
           - namespace: konfi
             revision: main
             path: stages/prod
